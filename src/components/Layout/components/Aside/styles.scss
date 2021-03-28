@@ -1,0 +1,75 @@
+.aside {
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 15%;
+  min-width: 200px;
+  font-size: 1.1rem;
+  padding: 20px;
+  line-height: 2.5;
+
+  .accordion-item {
+    background-color: transparent;
+    border: 0;
+
+    &:first-of-type {
+      .accordion-button {
+        border-radius: 0;
+      }
+    }
+  }
+
+  .accordion-button,
+  .accordion-body a {
+    color: #8391a2;
+    text-decoration: none;
+  }
+
+  .accordion-button {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    padding: 0;
+    border: 0;
+  }
+
+  .accordion-button:focus {
+    background-color: transparent;
+    box-shadow: none;
+  }
+  .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    color: #fff;
+    box-shadow: none;
+  }
+
+  .accordion-button::after,
+  .accordion-button:not(.collapsed)::after {
+    background-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%238391a2' class='bi bi-chevron-right' viewBox='0 0 16 16'><path fill-rule='evenodd' d='M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z'/></svg>");
+    transform: scale(0.5);
+  }
+  .accordion-button:not(.collapsed)::after {
+    transform: rotate(90deg) scale(0.5);
+  }
+
+  .accordion-collapse {
+    border: 0;
+  }
+  .accordion-body {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 0 0 0 36px;
+  }
+}
+
+/**
+ *  Accordion
+ */
+
+.aside .aside .accordion-button i {
+  margin-right: 15px;
+}
