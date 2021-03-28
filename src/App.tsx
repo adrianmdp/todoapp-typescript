@@ -1,11 +1,11 @@
 import React, { FC } from "react";
-import { Main } from "@components";
+import { Layout, Main } from "@components";
 
 const App: FC = () => {
   return (
-    <div>
+    <Layout>
       <Main title="Título de prueba" />
-    </div>
+    </Layout>
   );
 };
 
